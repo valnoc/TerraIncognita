@@ -11,34 +11,36 @@ import Foundation
 class TerraManagerBase: TerraManager {
 
     weak var delegate:TerraManagerDelegate?
+    var storage: TerraStorage
     
     required init(config:TerraManagerConfig) {
+        storage = TerraStorage()
     }
     
     //MARK: add markers
     internal func addMarker(_ marker: TerraMarker) {
-        addMarkers([marker])
+        storage.addMarker(marker)
     }
     
     internal func addMarkers(_ markers: [TerraMarker]) {
-        
+        storage.addMarkers(markers)
     }
     
     //MARK: remove markers
     internal func removeMarker(_ markerId:String) {
-        removeMarkers([markerId])
+        storage.removeMarker(markerId)
     }
     internal func removeMarkers(_ markerIds:[String]) {
-        
+        storage.removeMarkers(markerIds)
     }
     internal func removeAllMarkers() {
-        
+        storage.removeAllMarkers()
     }
     
     //MARK: reload markers
     internal func reloadMarkers(_ markers:[TerraMarker]) {
         removeAllMarkers()
         addMarkers(markers)
-        //TODO: call update terraView
+        //TODO: update markers on terraView
     }
 }
