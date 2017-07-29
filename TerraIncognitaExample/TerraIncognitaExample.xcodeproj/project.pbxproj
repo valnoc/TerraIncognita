@@ -19,6 +19,7 @@
 		5BB56F2E1F2D3DB800918069 /* TerraMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F281F2D3DB800918069 /* TerraMarker.swift */; };
 		5BB56F2F1F2D3DB800918069 /* TerraStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F291F2D3DB800918069 /* TerraStorage.swift */; };
 		5BB56F301F2D3DB800918069 /* TerraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F2A1F2D3DB800918069 /* TerraView.swift */; };
+		5BB56F321F2D3DEE00918069 /* TerraRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F311F2D3DEE00918069 /* TerraRegion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5BB56F281F2D3DB800918069 /* TerraMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraMarker.swift; sourceTree = "<group>"; };
 		5BB56F291F2D3DB800918069 /* TerraStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraStorage.swift; sourceTree = "<group>"; };
 		5BB56F2A1F2D3DB800918069 /* TerraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraView.swift; sourceTree = "<group>"; };
+		5BB56F311F2D3DEE00918069 /* TerraRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraRegion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				5BB56F281F2D3DB800918069 /* TerraMarker.swift */,
 				5BB56F291F2D3DB800918069 /* TerraStorage.swift */,
 				5BB56F2A1F2D3DB800918069 /* TerraView.swift */,
+				5BB56F311F2D3DEE00918069 /* TerraRegion.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB56F321F2D3DEE00918069 /* TerraRegion.swift in Sources */,
 				5BB56EF81F2CF03200918069 /* ViewController.swift in Sources */,
 				5BB56F2C1F2D3DB800918069 /* TerraManagerBase.swift in Sources */,
 				5BB56F2B1F2D3DB800918069 /* TerraManager.swift in Sources */,
