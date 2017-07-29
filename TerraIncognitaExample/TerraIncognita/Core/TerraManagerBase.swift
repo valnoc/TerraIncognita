@@ -19,17 +19,17 @@ class TerraManagerBase: TerraManager {
     }
     
     //MARK: - markers
-    internal func reloadMarkers(_ newMarkers:[TerraMarker]) {
+    func reloadMarkers(_ newMarkers:[TerraMarker]) {
         storage.reloadMarkers(newMarkers) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateView(markers: markers)
+            __self.updateViewMarkers(markers)
         }
     }
     
-    internal func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
+    func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
         storage.reloadMarkers(add: markersToAdd, remove: markerIdsToRemove) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateView(markers: markers)
+            __self.updateViewMarkers(markers)
         }
     }
     
@@ -49,6 +49,6 @@ class TerraManagerBase: TerraManager {
     }
     
     //MARK: - debug
-    let debugMessage_notSupported = "Selected terra manager does not support this function"
-    let debugMessage_notImplemented = "Critical error! This function is not implemented"
+    fileprivate let debugMessage_notSupported = "Selected terra manager does not support this function"
+    fileprivate let debugMessage_notImplemented = "Critical error! This function is not implemented"
 }
