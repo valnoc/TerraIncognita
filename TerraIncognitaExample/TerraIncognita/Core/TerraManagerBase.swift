@@ -20,14 +20,16 @@ class TerraManagerBase: TerraManager {
     
     //MARK: - markers
     internal func reloadMarkers(_ newMarkers:[TerraMarker]) {
-        storage.reloadMarkers(newMarkers) { (markers) in
-            //TODO: update view
+        storage.reloadMarkers(newMarkers) { [weak self] (markers) in
+            guard let __self = self else { return }
+            __self.updateView(markers: markers)
         }
     }
     
     internal func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
-        storage.reloadMarkers(add: markersToAdd, remove: markerIdsToRemove) { (markers) in
-            //TODO: update view
+        storage.reloadMarkers(add: markersToAdd, remove: markerIdsToRemove) { [weak self] (markers) in
+            guard let __self = self else { return }
+            __self.updateView(markers: markers)
         }
     }
     
@@ -40,6 +42,10 @@ class TerraManagerBase: TerraManager {
     
     func makeTerraView() -> TerraView {
         fatalError(debugMessage_notImplemented)
+    }
+    
+    func updateView(markers:[TerraMarker]) {
+        
     }
     
     //MARK: - debug
