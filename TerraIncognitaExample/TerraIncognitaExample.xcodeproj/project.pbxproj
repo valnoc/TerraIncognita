@@ -13,12 +13,12 @@
 		5BB56EFD1F2CF03200918069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EFC1F2CF03200918069 /* Assets.xcassets */; };
 		5BB56F001F2CF03200918069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EFE1F2CF03200918069 /* LaunchScreen.storyboard */; };
 		5BB56F0B1F2CF03300918069 /* TerraIncognitaExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */; };
-		5BB56F181F2D168900918069 /* TerraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F171F2D168900918069 /* TerraManager.swift */; };
-		5BB56F1A1F2D16F800918069 /* TerraManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F191F2D16F800918069 /* TerraManagerBase.swift */; };
-		5BB56F1C1F2D19A000918069 /* TerraManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F1B1F2D19A000918069 /* TerraManagerConfig.swift */; };
-		5BB56F1E1F2D1F6700918069 /* TerraMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F1D1F2D1F6700918069 /* TerraMarker.swift */; };
-		5BB56F201F2D226B00918069 /* TerraStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F1F1F2D226B00918069 /* TerraStorage.swift */; };
-		5BB56F221F2D2CC800918069 /* TerraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F211F2D2CC800918069 /* TerraView.swift */; };
+		5BB56F2B1F2D3DB800918069 /* TerraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F251F2D3DB800918069 /* TerraManager.swift */; };
+		5BB56F2C1F2D3DB800918069 /* TerraManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F261F2D3DB800918069 /* TerraManagerBase.swift */; };
+		5BB56F2D1F2D3DB800918069 /* TerraManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F271F2D3DB800918069 /* TerraManagerConfig.swift */; };
+		5BB56F2E1F2D3DB800918069 /* TerraMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F281F2D3DB800918069 /* TerraMarker.swift */; };
+		5BB56F2F1F2D3DB800918069 /* TerraStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F291F2D3DB800918069 /* TerraStorage.swift */; };
+		5BB56F301F2D3DB800918069 /* TerraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F2A1F2D3DB800918069 /* TerraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +42,12 @@
 		5BB56F061F2CF03300918069 /* TerraIncognitaExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerraIncognitaExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerraIncognitaExampleTests.swift; sourceTree = "<group>"; };
 		5BB56F0C1F2CF03300918069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BB56F171F2D168900918069 /* TerraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManager.swift; sourceTree = "<group>"; };
-		5BB56F191F2D16F800918069 /* TerraManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerBase.swift; sourceTree = "<group>"; };
-		5BB56F1B1F2D19A000918069 /* TerraManagerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerConfig.swift; sourceTree = "<group>"; };
-		5BB56F1D1F2D1F6700918069 /* TerraMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraMarker.swift; sourceTree = "<group>"; };
-		5BB56F1F1F2D226B00918069 /* TerraStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraStorage.swift; sourceTree = "<group>"; };
-		5BB56F211F2D2CC800918069 /* TerraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraView.swift; sourceTree = "<group>"; };
+		5BB56F251F2D3DB800918069 /* TerraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManager.swift; sourceTree = "<group>"; };
+		5BB56F261F2D3DB800918069 /* TerraManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerBase.swift; sourceTree = "<group>"; };
+		5BB56F271F2D3DB800918069 /* TerraManagerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerConfig.swift; sourceTree = "<group>"; };
+		5BB56F281F2D3DB800918069 /* TerraMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraMarker.swift; sourceTree = "<group>"; };
+		5BB56F291F2D3DB800918069 /* TerraStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraStorage.swift; sourceTree = "<group>"; };
+		5BB56F2A1F2D3DB800918069 /* TerraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		5BB56EE91F2CF03200918069 = {
 			isa = PBXGroup;
 			children = (
-				5BB56F151F2CFBC500918069 /* TerraIncognita */,
+				5BB56F231F2D3DB800918069 /* TerraIncognita */,
 				5BB56EF41F2CF03200918069 /* TerraIncognitaExample */,
 				5BB56F091F2CF03300918069 /* TerraIncognitaExampleTests */,
 				5BB56EF31F2CF03200918069 /* Products */,
@@ -109,23 +109,23 @@
 			path = TerraIncognitaExampleTests;
 			sourceTree = "<group>";
 		};
-		5BB56F151F2CFBC500918069 /* TerraIncognita */ = {
+		5BB56F231F2D3DB800918069 /* TerraIncognita */ = {
 			isa = PBXGroup;
 			children = (
-				5BB56F161F2D167A00918069 /* Core */,
+				5BB56F241F2D3DB800918069 /* Core */,
 			);
 			path = TerraIncognita;
 			sourceTree = "<group>";
 		};
-		5BB56F161F2D167A00918069 /* Core */ = {
+		5BB56F241F2D3DB800918069 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				5BB56F171F2D168900918069 /* TerraManager.swift */,
-				5BB56F1B1F2D19A000918069 /* TerraManagerConfig.swift */,
-				5BB56F191F2D16F800918069 /* TerraManagerBase.swift */,
-				5BB56F211F2D2CC800918069 /* TerraView.swift */,
-				5BB56F1F1F2D226B00918069 /* TerraStorage.swift */,
-				5BB56F1D1F2D1F6700918069 /* TerraMarker.swift */,
+				5BB56F251F2D3DB800918069 /* TerraManager.swift */,
+				5BB56F261F2D3DB800918069 /* TerraManagerBase.swift */,
+				5BB56F271F2D3DB800918069 /* TerraManagerConfig.swift */,
+				5BB56F281F2D3DB800918069 /* TerraMarker.swift */,
+				5BB56F291F2D3DB800918069 /* TerraStorage.swift */,
+				5BB56F2A1F2D3DB800918069 /* TerraView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -234,12 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB56EF81F2CF03200918069 /* ViewController.swift in Sources */,
-				5BB56F1A1F2D16F800918069 /* TerraManagerBase.swift in Sources */,
-				5BB56F181F2D168900918069 /* TerraManager.swift in Sources */,
-				5BB56F221F2D2CC800918069 /* TerraView.swift in Sources */,
-				5BB56F1C1F2D19A000918069 /* TerraManagerConfig.swift in Sources */,
-				5BB56F201F2D226B00918069 /* TerraStorage.swift in Sources */,
-				5BB56F1E1F2D1F6700918069 /* TerraMarker.swift in Sources */,
+				5BB56F2C1F2D3DB800918069 /* TerraManagerBase.swift in Sources */,
+				5BB56F2B1F2D3DB800918069 /* TerraManager.swift in Sources */,
+				5BB56F301F2D3DB800918069 /* TerraView.swift in Sources */,
+				5BB56F2D1F2D3DB800918069 /* TerraManagerConfig.swift in Sources */,
+				5BB56F2F1F2D3DB800918069 /* TerraStorage.swift in Sources */,
+				5BB56F2E1F2D3DB800918069 /* TerraMarker.swift in Sources */,
 				5BB56EF61F2CF03200918069 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
