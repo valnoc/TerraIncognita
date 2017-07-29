@@ -9,4 +9,5 @@
 import Foundation
 
 protocol TerraView {
+    func currentRegion() -> TerraRegion
 }

@@ -13,9 +13,14 @@ class TerraManagerBase: TerraManager {
     weak var delegate:TerraManagerDelegate?
     var storage: TerraStorage
     var view: TerraView?
+    var updateViewQueue:DispatchQueue
+    
+    var currentViewMarkers:[TerraMarker]
     
     required init(config:TerraManagerConfig) {
         storage = TerraStorage()
+        updateViewQueue = DispatchQueue(label: "TerraManagerBase")
+        currentViewMarkers = []
     }
     
     //MARK: - markers
@@ -44,8 +49,20 @@ class TerraManagerBase: TerraManager {
         fatalError(debugMessage_notImplemented)
     }
     
-    func updateView(markers:[TerraMarker]) {
-        
+    fileprivate func updateViewMarkers(_ newMarkers:[TerraMarker]) {
+        updateViewQueue.sync { [weak self] in
+            guard let __self = self else { return }
+            guard let terraView = __self.terraView else { return }
+            
+            let region = terraView.currentRegion()
+            let markersInside = newMarkers.filter({ region.containsCoordinate($0.coordinate) })
+            
+            //TODO: decide, what to add/remove
+        }
+    }
+    
+    func updateViewMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
+        //TODO: implement
     }
     
     //MARK: - debug

@@ -10,16 +10,36 @@ import Foundation
 import CoreLocation
 
 class TerraRegion {
-    var centerCoordinate: CLLocationCoordinate2D
+    var center: CLLocationCoordinate2D
     
-    var deltaLon: CLLocationDegrees
     var deltaLat: CLLocationDegrees
+    var deltaLon: CLLocationDegrees
     
-    init(centerCoordinate: CLLocationCoordinate2D,
-         deltaLon: CLLocationDegrees,
-         deltaLat: CLLocationDegrees) {
-        self.centerCoordinate = centerCoordinate
-        self.deltaLon = deltaLon
+    init(center: CLLocationCoordinate2D,
+         deltaLat: CLLocationDegrees,
+         deltaLon: CLLocationDegrees) {
+        self.center = center
         self.deltaLat = deltaLat
+        self.deltaLon = deltaLon
     }
+    
+    func containsCoordinate(_ coordinate:CLLocationCoordinate2D) -> Bool {
+        //TODO: implement check
+        return false
+    }    
+
+//    //MARK: northWest & southEast
+//    func makeNorthWestSouthEast() -> (CLLocationCoordinate2D, CLLocationCoordinate2D) {
+//        return (makeNorthWest(), makeSouthEast())
+//    }
+//    
+//    func makeNorthWest() -> CLLocationCoordinate2D {
+//        return CLLocationCoordinate2D(latitude: center.latitude - deltaLat,
+//                                      longitude: center.longitude + deltaLon)
+//    }
+//    
+//    func makeSouthEast() -> CLLocationCoordinate2D {
+//        return CLLocationCoordinate2D(latitude: center.latitude + deltaLat,
+//                                      longitude: center.longitude - deltaLon)
+//    }
 }
