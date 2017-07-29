@@ -59,6 +59,7 @@
 		5BB56EE91F2CF03200918069 = {
 			isa = PBXGroup;
 			children = (
+				5BB56F151F2CFBC500918069 /* TerraIncognita */,
 				5BB56EF41F2CF03200918069 /* TerraIncognitaExample */,
 				5BB56F091F2CF03300918069 /* TerraIncognitaExampleTests */,
 				5BB56EF31F2CF03200918069 /* Products */,
@@ -94,6 +95,13 @@
 				5BB56F0C1F2CF03300918069 /* Info.plist */,
 			);
 			path = TerraIncognitaExampleTests;
+			sourceTree = "<group>";
+		};
+		5BB56F151F2CFBC500918069 /* TerraIncognita */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TerraIncognita;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
