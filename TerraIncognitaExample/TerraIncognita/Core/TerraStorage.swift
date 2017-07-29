@@ -49,9 +49,7 @@ class TerraStorage {
         }
     }
     fileprivate func removeMarker(_ markerId:String) {
-        let markerIndex = markers.index { (item) -> Bool in
-            return item._id == markerId
-        }
+        let markerIndex = markers.index { $0._id == markerId }
         guard let index = markerIndex else { return }
         markers.remove(at: index)
     }
