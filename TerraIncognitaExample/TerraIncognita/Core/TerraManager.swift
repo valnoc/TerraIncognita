@@ -25,4 +25,8 @@ protocol TerraManager {
     func removeMarker(_ markerId:String)
     func removeMarkers(_ markerIds:[String])
     func removeAllMarkers()
+    
+    //MARK - view
+    var terraView: TerraView? {get}
+    func makeTerraView() -> TerraView
 }

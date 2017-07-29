@@ -12,6 +12,7 @@ class TerraManagerBase: TerraManager {
 
     weak var delegate:TerraManagerDelegate?
     var storage: TerraStorage
+    var view: TerraView?
     
     required init(config:TerraManagerConfig) {
         storage = TerraStorage()
@@ -42,5 +43,16 @@ class TerraManagerBase: TerraManager {
     }
     internal func removeAllMarkers() {
         storage.removeAllMarkers()
+    }
+    
+    //MARK - view
+    var terraView: TerraView? {
+        get{
+            return view
+        }
+    }
+    
+    func makeTerraView() -> TerraView {
+        fatalError("makeTerraView() must be overrided")
     }
 }
