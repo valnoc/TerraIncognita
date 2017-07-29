@@ -31,7 +31,7 @@ class TerraManagerBase: TerraManager {
         }
     }
     
-    //MARK - view
+    //MARK: - view
     var terraView: TerraView? {
         get{
             return view
@@ -39,6 +39,10 @@ class TerraManagerBase: TerraManager {
     }
     
     func makeTerraView() -> TerraView {
-        fatalError("makeTerraView() must be overrided")
+        fatalError(debugMessage_notImplemented)
     }
+    
+    //MARK: - debug
+    let debugMessage_notSupported = "Selected terra manager does not support this function"
+    let debugMessage_notImplemented = "Critical error! This function is not implemented"
 }
