@@ -15,16 +15,8 @@ protocol TerraManager {
     weak var delegate:TerraManagerDelegate? {get set}
     
     //MARK: - markers
-    func reloadMarkers(_ markers:[TerraMarker])
-    
-    //MARK: add markers
-    func addMarker(_ marker:TerraMarker)
-    func addMarkers(_ markers:[TerraMarker])
-    
-    //MARK: remove markers
-    func removeMarker(_ markerId:String)
-    func removeMarkers(_ markerIds:[String])
-    func removeAllMarkers()
+    func reloadMarkers(_ newMarkers:[TerraMarker])
+    func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String])
     
     //MARK - view
     var terraView: TerraView? {get}
