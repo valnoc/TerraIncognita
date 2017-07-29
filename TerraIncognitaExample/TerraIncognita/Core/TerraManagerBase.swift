@@ -9,9 +9,36 @@
 import Foundation
 
 class TerraManagerBase: TerraManager {
+
     weak var delegate:TerraManagerDelegate?
     
-    init(config:TerraManagerConfig) {
+    required init(config:TerraManagerConfig) {
+    }
+    
+    //MARK: add markers
+    internal func addMarker(_ marker: TerraMarker) {
+        addMarkers([marker])
+    }
+    
+    internal func addMarkers(_ markers: [TerraMarker]) {
         
+    }
+    
+    //MARK: remove markers
+    internal func removeMarker(_ markerId:String) {
+        removeMarkers([markerId])
+    }
+    internal func removeMarkers(_ markerIds:[String]) {
+        
+    }
+    internal func removeAllMarkers() {
+        
+    }
+    
+    //MARK: reload markers
+    internal func reloadMarkers(_ markers:[TerraMarker]) {
+        removeAllMarkers()
+        addMarkers(markers)
+        //TODO: call update terraView
     }
 }
