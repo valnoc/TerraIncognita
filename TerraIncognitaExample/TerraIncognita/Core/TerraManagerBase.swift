@@ -17,6 +17,13 @@ class TerraManagerBase: TerraManager {
         storage = TerraStorage()
     }
     
+    //MARK: - markers
+    internal func reloadMarkers(_ markers:[TerraMarker]) {
+        removeAllMarkers()
+        addMarkers(markers)
+        //TODO: update markers on terraView
+    }
+    
     //MARK: add markers
     internal func addMarker(_ marker: TerraMarker) {
         storage.addMarker(marker)
@@ -35,12 +42,5 @@ class TerraManagerBase: TerraManager {
     }
     internal func removeAllMarkers() {
         storage.removeAllMarkers()
-    }
-    
-    //MARK: reload markers
-    internal func reloadMarkers(_ markers:[TerraMarker]) {
-        removeAllMarkers()
-        addMarkers(markers)
-        //TODO: update markers on terraView
     }
 }
