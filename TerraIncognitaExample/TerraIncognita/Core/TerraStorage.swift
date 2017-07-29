@@ -8,6 +8,9 @@
 
 import Foundation
 
+typealias TerraStorageUpdateCompletion = (_ markers:[TerraMarker]) -> Void
+//typealias TerraStorageMarkersCompletion = (_ markers:[TerraMarker]) -> Void
+
 class TerraStorage {
     fileprivate var markers:[TerraMarker]
     
@@ -16,23 +19,27 @@ class TerraStorage {
     init() {
         markers = []
         
-        queue = DispatchQueue(label: "TerraStorage_queue")
+        queue = DispatchQueue(label: "TerraStorage_queue", qos:.userInitiated)
     }
     
-    //MARK: add markers
-    internal func reloadMarkers(_ newMarkers:[TerraMarker]) {
+    //MARK: markers
+    internal func reloadMarkers(_ newMarkers:[TerraMarker], completion: @escaping TerraStorageUpdateCompletion) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             __self.markers.removeAll()
             __self.markers.append(contentsOf: newMarkers)
+            
+            completion(__self.markers)
         }
     }
     
-    internal func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
+    internal func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String], completion: @escaping TerraStorageUpdateCompletion) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             __self.removeMarkers(markerIdsToRemove)
             __self.markers.append(contentsOf: markersToAdd)
+            
+            completion(__self.markers)
         }
     }
 
