@@ -27,14 +27,14 @@ class TerraManagerBase: TerraManager {
     func reloadMarkers(_ newMarkers:[TerraMarker]) {
         storage.reloadMarkers(newMarkers) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateViewMarkers(markers)
+            __self.updateMarkersOnTerraView(markers)
         }
     }
     
     func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
         storage.reloadMarkers(add: markersToAdd, remove: markerIdsToRemove) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateViewMarkers(markers)
+            __self.updateMarkersOnTerraView(markers)
         }
     }
     
@@ -49,20 +49,20 @@ class TerraManagerBase: TerraManager {
         fatalError(debugMessage_notImplemented)
     }
     
-    fileprivate func updateViewMarkers(_ newMarkers:[TerraMarker]) {
-        updateViewQueue.sync { [weak self] in
+    fileprivate func updateMarkersOnTerraView(_ markers:[TerraMarker]) {
+        updateViewQueue.async { [weak self] in
             guard let __self = self else { return }
             guard let terraView = __self.terraView else { return }
             
             let region = terraView.currentRegion()
-            let markersInside = newMarkers.filter({ region.containsCoordinate($0.coordinate) })
+            let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
             
-            //TODO: decide, what to add/remove
+            __self.showVisibleMarkersOnTerraView(markersInside)
         }
     }
     
-    func updateViewMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
-        //TODO: implement
+    func showVisibleMarkersOnTerraView(_ visibleMarkers:[TerraMarker]) {
+        fatalError(debugMessage_notImplemented)
     }
     
     //MARK: - debug
