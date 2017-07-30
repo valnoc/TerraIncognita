@@ -9,7 +9,14 @@
 import Foundation
 import MapKit
 
-class AMapsView: MKMapView, TerraView {
+class AMapsView: MKMapView {
+
+//    init() {
+//        delegate = self
+//    }
+}
+
+extension AMapsView: TerraView {
     func view() -> UIView {
         return self
     }
@@ -25,4 +32,8 @@ class AMapsView: MKMapView, TerraView {
     func updateViewMarkers(add viewMarkersToAdd: [TerraViewMarker], remove viewMarkersToRemove: [TerraViewMarker]) {
         fatalError(debugMessage_notImplemented)
     }
+}
+
+extension AMapsView: MKMapViewDelegate {
+    
 }
