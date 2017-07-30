@@ -51,6 +51,7 @@ class TerraViewObjectsPool {
         }
     }
     
+    //MARK: viewMarkers
     func otherUsedViewMarkers(_ actualViewMarkers:[TerraViewMarker]) -> [TerraViewMarker] {
         let actualIds = actualViewMarkers.map({$0.terra_markerId})
         let otherViewMarkers = usedViewMarkers.filter({ actualIds.contains($0.terra_markerId) == false })

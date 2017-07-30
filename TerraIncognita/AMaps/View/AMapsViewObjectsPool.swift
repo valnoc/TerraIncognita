@@ -8,10 +8,10 @@
 
 import Foundation
 
-class AMapsViewObjectsPool {
+class AMapsViewObjectsPool: TerraViewObjectsPool {
     
-//    override func makeViewMarker(_ markerId: String) -> TerraViewMarker {
-//        fatalError(debugMessage_notImplemented)
-//    }
-    
+    //MARK: viewMarkers
+    override func makeViewMarker(_ markerId: String) -> TerraViewMarker {
+        fatalError(debugMessage_notImplemented)
+    }
 }
