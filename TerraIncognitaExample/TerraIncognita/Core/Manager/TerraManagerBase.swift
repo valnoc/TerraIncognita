@@ -29,14 +29,14 @@ class TerraManagerBase: TerraManager {
     func reloadMarkers(_ newMarkers:[TerraMarker]) {
         storage.reloadMarkers(newMarkers) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateMarkersOnTerraView(markers)
+            __self.updateViewMarkersOnTerraView(markers)
         }
     }
     
     func reloadMarkers(add markersToAdd:[TerraMarker], remove markerIdsToRemove:[String]) {
         storage.reloadMarkers(add: markersToAdd, remove: markerIdsToRemove) { [weak self] (markers) in
             guard let __self = self else { return }
-            __self.updateMarkersOnTerraView(markers)
+            __self.updateViewMarkersOnTerraView(markers)
         }
     }
     
@@ -51,7 +51,7 @@ class TerraManagerBase: TerraManager {
         fatalError(debugMessage_notImplemented)
     }
     
-    fileprivate func updateMarkersOnTerraView(_ markers:[TerraMarker]) {
+    fileprivate func updateViewMarkersOnTerraView(_ markers:[TerraMarker]) {
         updateViewQueue.async { [weak self] in
             guard let __self = self else { return }
             guard let terraView = __self.terraView else { return }
@@ -59,17 +59,17 @@ class TerraManagerBase: TerraManager {
             let region = terraView.currentRegion()
             let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
             
-            __self.showVisibleMarkersOnTerraView(markersInside)
+            __self.showActualViewMarkersOnTerraView(markersInside)
         }
     }
     
-    fileprivate func showVisibleMarkersOnTerraView(_ visibleMarkers:[TerraMarker]) {
+    fileprivate func showActualViewMarkersOnTerraView(_ actualMarkers:[TerraMarker]) {
         var actualViewMarkers:[TerraViewMarker] = []
-        for item in visibleMarkers {
+        for item in actualMarkers {
             actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id))
         }
         
-        var otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
+        let otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
         viewObjectsPool.enqueueReusableViewMarkers(otherViewMarkers)
         
         if let terraView = terraView {
