@@ -21,6 +21,7 @@ class AMapsManagerObj: TerraManagerBase {
 
     init(config: AMapsManagerConfig) {
         super.init(config: config)
+        viewObjectsPool = AMapsViewObjectsPool()
     }
 
     //MARK: - markers

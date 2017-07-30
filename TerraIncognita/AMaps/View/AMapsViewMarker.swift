@@ -11,4 +11,5 @@ import MapKit
 
 class AMapsViewMarker: MKAnnotationView, TerraViewMarker {
     var terra_markerId: String!
+    var terra_reuseIdentifier: String?
 }

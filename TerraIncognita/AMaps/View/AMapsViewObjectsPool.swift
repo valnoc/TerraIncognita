@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import MapKit
 
 class AMapsViewObjectsPool: TerraViewObjectsPool {
     
     //MARK: viewMarkers
-    override func makeViewMarker(_ markerId: String) -> TerraViewMarker {
-        fatalError(debugMessage_notImplemented)
+    override func makeViewMarker(_ markerId: String, reuseIdentifier: String?) -> TerraViewMarker {
+        let viewMarker = AMapsViewMarker()
+        viewMarker.terra_markerId = markerId
+        viewMarker.terra_reuseIdentifier = reuseIdentifier
+        return viewMarker
     }
 }

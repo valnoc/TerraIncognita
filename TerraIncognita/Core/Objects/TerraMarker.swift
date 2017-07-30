@@ -12,6 +12,7 @@ import CoreLocation
 class TerraMarker {
     var _id: String
     var coordinate: CLLocationCoordinate2D
+    var reuseIdentifier: String?
     
     init(_id: String,
          coordinate: CLLocationCoordinate2D) {

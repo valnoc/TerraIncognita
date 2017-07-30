@@ -21,16 +21,17 @@ class TerraViewObjectsPool {
     }
     
     //MARK: dequeue / enqueue
-    func dequeueReusableViewMarker(_ markerId: String) -> TerraViewMarker {
-        if let usedMarker = usedViewMarkers.filter({ $0.terra_markerId == markerId}).first {
+    func dequeueReusableViewMarker(_ markerId: String, reuseIdentifier:String?) -> TerraViewMarker {
+        if let usedMarker = usedViewMarkers.filter({ $0.terra_markerId == markerId && $0.terra_reuseIdentifier == reuseIdentifier}).first {
             return usedMarker
         }
         else if var freeMarker = freeViewMarkers.first {
             freeMarker.terra_markerId = markerId
+            freeMarker.terra_reuseIdentifier = reuseIdentifier
             return freeMarker
         }
         else {
-            let newFreeMarker = makeViewMarker(markerId)
+            let newFreeMarker = makeViewMarker(markerId, reuseIdentifier: reuseIdentifier)
             usedViewMarkers.append(newFreeMarker)
             return newFreeMarker
         }
@@ -58,7 +59,7 @@ class TerraViewObjectsPool {
         return otherViewMarkers
     }
     
-    func makeViewMarker(_ markerId: String) -> TerraViewMarker {
+    func makeViewMarker(_ markerId: String, reuseIdentifier:String?) -> TerraViewMarker {
         fatalError(debugMessage_notImplemented)
     }
     

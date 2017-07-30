@@ -10,4 +10,5 @@ import Foundation
 
 protocol TerraViewMarker {
     var terra_markerId: String! {get set}
+    var terra_reuseIdentifier: String? {get set}
 }

@@ -63,7 +63,7 @@ class TerraManagerBase: TerraManager {
     fileprivate func showActualViewMarkersOnTerraView(_ actualMarkers:[TerraMarker]) {
         var actualViewMarkers:[TerraViewMarker] = []
         for item in actualMarkers {
-            actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id))
+            actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id, reuseIdentifier: item.reuseIdentifier))
         }
         
         let otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
