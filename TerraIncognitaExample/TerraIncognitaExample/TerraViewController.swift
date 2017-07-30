@@ -12,12 +12,8 @@ class TerraViewController: UIViewController, TerraManagerConfig {
     
     var terraManager: TerraManager!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func configureWithTerraSource(_ source:TerraIncogintaSource) {
-        terraManager = TerraIncogintaFactory().makeTerraManager(source: source, config: self)
+        terraManager = TerraIncognitaFactory().makeTerraManager(source: source, config: self)
         
         let terraView = terraManager.makeTerraView()
         let mapView = terraView.view()
@@ -26,4 +22,8 @@ class TerraViewController: UIViewController, TerraManagerConfig {
         self.view.addSubview(mapView)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
 }

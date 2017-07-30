@@ -1,5 +1,5 @@
 //
-//  TerraIncogintaFactory.swift
+//  TerraIncognitaFactory.swift
 //  TerraIncognitaExample
 //
 //  Created by Valeriy Bezuglyy on 30/07/2017.
@@ -12,7 +12,7 @@ enum TerraIncogintaSource {
     case AMaps
 }
 
-class TerraIncogintaFactory {
+class TerraIncognitaFactory {
 
     func makeTerraManager(source:TerraIncogintaSource, config:TerraManagerConfig) -> TerraManager {
         switch source {
