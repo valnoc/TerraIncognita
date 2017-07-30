@@ -64,8 +64,4 @@ class TerraManagerBase: TerraManager {
     func showVisibleMarkersOnTerraView(_ visibleMarkers:[TerraMarker]) {
         fatalError(debugMessage_notImplemented)
     }
-    
-    //MARK: - debug
-    fileprivate let debugMessage_notSupported = "Selected terra manager does not support this function"
-    fileprivate let debugMessage_notImplemented = "Critical error! This function is not implemented"
 }
