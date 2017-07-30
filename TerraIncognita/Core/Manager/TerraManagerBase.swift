@@ -53,8 +53,9 @@ class TerraManagerBase: TerraManager {
             guard let __self = self else { return }
             guard let terraView = __self.terraView else { return }
             
-            let region = terraView.currentRegion()
-            let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
+//            let region = terraView.currentRegion()
+//            let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
+            let markersInside = markers
             
             __self.showActualViewMarkersOnTerraView(markersInside)
         }
