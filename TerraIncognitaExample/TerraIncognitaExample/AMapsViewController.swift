@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AMapsViewController: TerraViewController {
+class AMapsViewController: TerraViewController, AMapsManagerConfig {
     
 }

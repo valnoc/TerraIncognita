@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
                                         <state key="normal" title="AMaps"/>
                                         <connections>
-                                            <segue destination="ByU-Pn-Sec" kind="show" id="mfs-Zv-Gqk"/>
+                                            <segue destination="ByU-Pn-Sec" kind="show" identifier="AMapsSegue" id="mfs-Zv-Gqk"/>
                                         </connections>
                                     </button>
                                 </subviews>

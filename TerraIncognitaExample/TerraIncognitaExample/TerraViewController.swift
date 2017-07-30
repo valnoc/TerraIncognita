@@ -8,6 +8,22 @@
 
 import UIKit
 
-class TerraViewController: UIViewController {
+class TerraViewController: UIViewController, TerraManagerConfig {
+    
+    var terraManager: TerraManager!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func configureWithTerraSource(_ source:TerraIncogintaSource) {
+        terraManager = TerraIncogintaFactory().makeTerraManager(source: source, config: self)
+        
+        let terraView = terraManager.makeTerraView()
+        let mapView = terraView.view()
+        mapView.frame = self.view.bounds
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(mapView)
+    }
     
 }
