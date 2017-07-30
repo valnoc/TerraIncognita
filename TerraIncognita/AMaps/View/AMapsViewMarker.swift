@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import MapKit
 
-//protocol TerraViewMarker {
-//    var terra_markerId: String {get set}
-//}
+class AMapsViewMarker: MKAnnotationView, TerraViewMarker {
+    var terra_markerId: String!
+}
