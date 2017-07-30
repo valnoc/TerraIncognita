@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-protocol TerraViewMarker {
+protocol TerraViewMarker: class {
     var terra_markerId: String! {get set}
     var terra_reuseIdentifier: String? {get set}
     

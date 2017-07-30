@@ -63,7 +63,9 @@ class TerraManagerBase: TerraManager {
     fileprivate func showActualViewMarkersOnTerraView(_ actualMarkers:[TerraMarker]) {
         var actualViewMarkers:[TerraViewMarker] = []
         for item in actualMarkers {
-            actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id, reuseIdentifier: item.reuseIdentifier))
+            let viewMarker = viewObjectsPool.dequeueReusableViewMarker(item._id, reuseIdentifier: item.reuseIdentifier)
+            configure(viewMarker, with: item)
+            actualViewMarkers.append(viewMarker)
         }
         
         let otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
@@ -73,5 +75,12 @@ class TerraManagerBase: TerraManager {
             terraView.updateViewMarkers(add: actualViewMarkers,
                                         remove: otherViewMarkers)
         }
+    }
+    
+    //MARK: - view marker
+    func configure(_ viewMarker:TerraViewMarker, with terraMarker:TerraMarker) {
+        viewMarker.terra_markerId = terraMarker._id
+        viewMarker.terra_reuseIdentifier = terraMarker.reuseIdentifier
+        viewMarker.terra_coordinate = terraMarker.coordinate
     }
 }
