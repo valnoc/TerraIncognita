@@ -35,6 +35,11 @@ class TerraViewController: UIViewController, TerraManagerConfig {
 
     func startUpdatingMarkers() {
         terraManager.reloadMarkers(makeMarkersSet1())
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5, execute: { [weak self] in
+            guard let __self = self else { return }
+            __self.terraManager.reloadMarkers(__self.makeMarkersSet2())
+        })
     }
     
     func makeMarkersSet1() -> [TerraMarker] {
@@ -47,6 +52,22 @@ class TerraViewController: UIViewController, TerraManagerConfig {
         }
         do{
             let marker = factory.makeTerraMarker(_id: "moscow", coordinate: CLLocationCoordinate2D(latitude: 55.750, longitude: 37.620))
+            markers.append(marker)
+        }
+        
+        return markers
+    }
+    
+    func makeMarkersSet2() -> [TerraMarker] {
+        let factory = TerraIncognitaFactory()
+        var markers:[TerraMarker] = []
+        
+        do{
+            let marker = factory.makeTerraMarker(_id: "st.peter", coordinate: CLLocationCoordinate2D(latitude: 59.930, longitude: 30.320))
+            markers.append(marker)
+        }
+        do{
+            let marker = factory.makeTerraMarker(_id: "Kazan", coordinate: CLLocationCoordinate2D(latitude: 55.750, longitude: 49.130))
             markers.append(marker)
         }
         
