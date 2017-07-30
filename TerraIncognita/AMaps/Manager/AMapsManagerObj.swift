@@ -26,8 +26,9 @@ class AMapsManagerObj: TerraManagerBase {
     //MARK: - markers
 
     //MARK: - view
-//    func makeTerraView() -> TerraView {
-//        fatalError(debugMessage_notImplemented)
-//    }
+    override func makeTerraView() -> TerraView {
+        view = AMapsView()
+        return view!
+    }
 
 }
