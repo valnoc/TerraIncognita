@@ -10,4 +10,6 @@ import Foundation
 
 protocol TerraView {
     func currentRegion() -> TerraRegion
+    
+    func updateViewMarkers(add viewMarkersToAdd:[TerraViewMarker], remove viewMarkersToRemove:[TerraViewMarker])
 }

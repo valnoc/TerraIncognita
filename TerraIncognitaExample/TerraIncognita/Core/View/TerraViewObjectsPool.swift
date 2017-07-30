@@ -44,6 +44,18 @@ class TerraViewObjectsPool {
             freeViewMarkers.append(viewMarker)
         }
     }
+
+    func enqueueReusableViewMarkers(_ viewMarkers:[TerraViewMarker]) {
+        for item in viewMarkers {
+            enqueueReusableViewMarker(item)
+        }
+    }
+    
+    func otherUsedViewMarkers(_ actualViewMarkers:[TerraViewMarker]) -> [TerraViewMarker] {
+        let actualIds = actualViewMarkers.map({$0.terra_markerId})
+        let otherViewMarkers = usedViewMarkers.filter({ actualIds.contains($0.terra_markerId) == false })
+        return otherViewMarkers
+    }
     
     fileprivate func makeViewMarker(_ markerId: String) -> TerraViewMarker {
         fatalError(debugMessage_notImplemented)

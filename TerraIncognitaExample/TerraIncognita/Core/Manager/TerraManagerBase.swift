@@ -13,6 +13,7 @@ class TerraManagerBase: TerraManager {
     weak var delegate:TerraManagerDelegate?
     var storage: TerraStorage
     var view: TerraView?
+    var viewObjectsPool: TerraViewObjectsPool
     var updateViewQueue:DispatchQueue
     
     var currentViewMarkers:[TerraMarker]
@@ -21,6 +22,7 @@ class TerraManagerBase: TerraManager {
         storage = TerraStorage()
         updateViewQueue = DispatchQueue(label: "TerraManagerBase_updateViewQueue")
         currentViewMarkers = []
+        viewObjectsPool = TerraViewObjectsPool()
     }
     
     //MARK: - markers
@@ -61,7 +63,18 @@ class TerraManagerBase: TerraManager {
         }
     }
     
-    func showVisibleMarkersOnTerraView(_ visibleMarkers:[TerraMarker]) {
-        fatalError(debugMessage_notImplemented)
+    fileprivate func showVisibleMarkersOnTerraView(_ visibleMarkers:[TerraMarker]) {
+        var actualViewMarkers:[TerraViewMarker] = []
+        for item in visibleMarkers {
+            actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id))
+        }
+        
+        var otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
+        viewObjectsPool.enqueueReusableViewMarkers(otherViewMarkers)
+        
+        if let terraView = terraView {
+            terraView.updateViewMarkers(add: actualViewMarkers,
+                                        remove: otherViewMarkers)
+        }
     }
 }
