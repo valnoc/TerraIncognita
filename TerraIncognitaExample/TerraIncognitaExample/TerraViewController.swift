@@ -1,5 +1,5 @@
 //
-//  AMapsViewController.swift
+//  TerraViewController.swift
 //  TerraIncognitaExample
 //
 //  Created by Valeriy Bezuglyy on 30/07/2017.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AMapsViewController: TerraViewController {
+class TerraViewController: UIViewController {
     
 }

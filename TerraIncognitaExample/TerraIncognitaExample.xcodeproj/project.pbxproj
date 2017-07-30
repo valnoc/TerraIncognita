@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B3221B01F2E0AC5008FCB24 /* AMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3221AF1F2E0AC5008FCB24 /* AMapsViewController.swift */; };
+		5B3221B21F2E0BD3008FCB24 /* TerraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3221B11F2E0BD3008FCB24 /* TerraViewController.swift */; };
 		5B69B0521F2E007700CFE1F4 /* TerraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0451F2E007700CFE1F4 /* TerraManager.swift */; };
 		5B69B0531F2E007700CFE1F4 /* TerraManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0461F2E007700CFE1F4 /* TerraManagerBase.swift */; };
 		5B69B0541F2E007700CFE1F4 /* TerraManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0471F2E007700CFE1F4 /* TerraManagerConfig.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		5B3221AF1F2E0AC5008FCB24 /* AMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMapsViewController.swift; sourceTree = "<group>"; };
+		5B3221B11F2E0BD3008FCB24 /* TerraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraViewController.swift; sourceTree = "<group>"; };
 		5B69B0451F2E007700CFE1F4 /* TerraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManager.swift; sourceTree = "<group>"; };
 		5B69B0461F2E007700CFE1F4 /* TerraManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerBase.swift; sourceTree = "<group>"; };
 		5B69B0471F2E007700CFE1F4 /* TerraManagerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraManagerConfig.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				5BB56EF51F2CF03200918069 /* AppDelegate.swift */,
 				5BB56EF71F2CF03200918069 /* MenuViewController.swift */,
+				5B3221B11F2E0BD3008FCB24 /* TerraViewController.swift */,
 				5B3221AF1F2E0AC5008FCB24 /* AMapsViewController.swift */,
 				5BB56EF91F2CF03200918069 /* Main.storyboard */,
 				5BB56EFC1F2CF03200918069 /* Assets.xcassets */,
@@ -348,6 +351,7 @@
 				5B69B0571F2E007700CFE1F4 /* TerraConstants.swift in Sources */,
 				5B69B05A1F2E007700CFE1F4 /* TerraViewMarker.swift in Sources */,
 				5B69B0521F2E007700CFE1F4 /* TerraManager.swift in Sources */,
+				5B3221B21F2E0BD3008FCB24 /* TerraViewController.swift in Sources */,
 				5B69B0881F2E043900CFE1F4 /* AMapsViewObjectsPool.swift in Sources */,
 				5B69B07C1F2E020500CFE1F4 /* AMapsManagerConfig.swift in Sources */,
 				5B69B0541F2E007700CFE1F4 /* TerraManagerConfig.swift in Sources */,
