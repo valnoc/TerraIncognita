@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
-protocol TerraViewMarker {
-    var terra_markerId: String {get set}
+protocol TerraViewMarker: class {
+    var terra_markerId: String! {get set}
+    var terra_reuseIdentifier: String? {get set}
+    
+    var terra_coordinate: CLLocationCoordinate2D! {get set}
 }

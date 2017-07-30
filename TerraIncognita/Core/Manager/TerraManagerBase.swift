@@ -16,12 +16,9 @@ class TerraManagerBase: TerraManager {
     var viewObjectsPool: TerraViewObjectsPool
     var updateViewQueue:DispatchQueue
     
-    var currentViewMarkers:[TerraMarker]
-    
-    required init(config:TerraManagerConfig) {
+    init(config:TerraManagerConfig) {
         storage = TerraStorage()
         updateViewQueue = DispatchQueue(label: "TerraManagerBase_updateViewQueue")
-        currentViewMarkers = []
         viewObjectsPool = TerraViewObjectsPool()
     }
     
@@ -56,8 +53,9 @@ class TerraManagerBase: TerraManager {
             guard let __self = self else { return }
             guard let terraView = __self.terraView else { return }
             
-            let region = terraView.currentRegion()
-            let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
+//            let region = terraView.currentRegion()
+//            let markersInside = markers.filter({ region.containsCoordinate($0.coordinate) })
+            let markersInside = markers
             
             __self.showActualViewMarkersOnTerraView(markersInside)
         }
@@ -66,7 +64,9 @@ class TerraManagerBase: TerraManager {
     fileprivate func showActualViewMarkersOnTerraView(_ actualMarkers:[TerraMarker]) {
         var actualViewMarkers:[TerraViewMarker] = []
         for item in actualMarkers {
-            actualViewMarkers.append(viewObjectsPool.dequeueReusableViewMarker(item._id))
+            let viewMarker = viewObjectsPool.dequeueReusableViewMarker(item._id, reuseIdentifier: item.reuseIdentifier)
+            configure(viewMarker, with: item)
+            actualViewMarkers.append(viewMarker)
         }
         
         let otherViewMarkers:[TerraViewMarker] = viewObjectsPool.otherUsedViewMarkers(actualViewMarkers)
@@ -76,5 +76,12 @@ class TerraManagerBase: TerraManager {
             terraView.updateViewMarkers(add: actualViewMarkers,
                                         remove: otherViewMarkers)
         }
+    }
+    
+    //MARK: - view marker
+    func configure(_ viewMarker:TerraViewMarker, with terraMarker:TerraMarker) {
+        viewMarker.terra_markerId = terraMarker._id
+        viewMarker.terra_reuseIdentifier = terraMarker.reuseIdentifier
+        viewMarker.terra_coordinate = terraMarker.coordinate
     }
 }

@@ -6,9 +6,11 @@
 //  Copyright © 2017 Valeriy Bezuglyy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol TerraView {
+    func view() -> UIView
+    
     func currentRegion() -> TerraRegion
     
     func updateViewMarkers(add viewMarkersToAdd:[TerraViewMarker], remove viewMarkersToRemove:[TerraViewMarker])

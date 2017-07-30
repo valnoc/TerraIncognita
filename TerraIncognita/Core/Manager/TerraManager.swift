@@ -11,7 +11,7 @@ import Foundation
 protocol TerraManagerDelegate:class {
 }
 
-protocol TerraManager {
+protocol TerraManager: class {
     weak var delegate:TerraManagerDelegate? {get set}
     
     //MARK: - markers
