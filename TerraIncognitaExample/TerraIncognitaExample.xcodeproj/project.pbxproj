@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B69B0251F2DF11600CFE1F4 /* TerraViewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0241F2DF11600CFE1F4 /* TerraViewMarker.swift */; };
+		5B69B0271F2DF17000CFE1F4 /* TerraViewObjectsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0261F2DF17000CFE1F4 /* TerraViewObjectsPool.swift */; };
 		5B69B0291F2DF31500CFE1F4 /* TerraConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0281F2DF31500CFE1F4 /* TerraConstants.swift */; };
 		5BB56EF61F2CF03200918069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56EF51F2CF03200918069 /* AppDelegate.swift */; };
 		5BB56EF81F2CF03200918069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56EF71F2CF03200918069 /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B69B0241F2DF11600CFE1F4 /* TerraViewMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraViewMarker.swift; sourceTree = "<group>"; };
+		5B69B0261F2DF17000CFE1F4 /* TerraViewObjectsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraViewObjectsPool.swift; sourceTree = "<group>"; };
 		5B69B0281F2DF31500CFE1F4 /* TerraConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerraConstants.swift; sourceTree = "<group>"; };
 		5BB56EF21F2CF03200918069 /* TerraIncognitaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraIncognitaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB56EF51F2CF03200918069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				5BB56F281F2D3DB800918069 /* TerraMarker.swift */,
 				5BB56F291F2D3DB800918069 /* TerraStorage.swift */,
 				5BB56F2A1F2D3DB800918069 /* TerraView.swift */,
+				5B69B0241F2DF11600CFE1F4 /* TerraViewMarker.swift */,
+				5B69B0261F2DF17000CFE1F4 /* TerraViewObjectsPool.swift */,
 				5BB56F311F2D3DEE00918069 /* TerraRegion.swift */,
 				5B69B0281F2DF31500CFE1F4 /* TerraConstants.swift */,
 			);
@@ -242,11 +248,13 @@
 				5BB56F321F2D3DEE00918069 /* TerraRegion.swift in Sources */,
 				5BB56EF81F2CF03200918069 /* ViewController.swift in Sources */,
 				5BB56F2C1F2D3DB800918069 /* TerraManagerBase.swift in Sources */,
+				5B69B0251F2DF11600CFE1F4 /* TerraViewMarker.swift in Sources */,
 				5BB56F2B1F2D3DB800918069 /* TerraManager.swift in Sources */,
 				5BB56F301F2D3DB800918069 /* TerraView.swift in Sources */,
 				5B69B0291F2DF31500CFE1F4 /* TerraConstants.swift in Sources */,
 				5BB56F2D1F2D3DB800918069 /* TerraManagerConfig.swift in Sources */,
 				5BB56F2F1F2D3DB800918069 /* TerraStorage.swift in Sources */,
+				5B69B0271F2DF17000CFE1F4 /* TerraViewObjectsPool.swift in Sources */,
 				5BB56F2E1F2D3DB800918069 /* TerraMarker.swift in Sources */,
 				5BB56EF61F2CF03200918069 /* AppDelegate.swift in Sources */,
 			);
