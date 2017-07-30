@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import MapKit
 
-//protocol TerraView {
-//    func currentRegion() -> TerraRegion
-//    
-//    func updateViewMarkers(add viewMarkersToAdd:[TerraViewMarker], remove viewMarkersToRemove:[TerraViewMarker])
-//}
+class AMapsView: MKMapView, TerraView {
+    func currentRegion() -> TerraRegion {
+        let mkRegion = region
+        let terraRegion = TerraRegion(center: mkRegion.center,
+                                      deltaLat: mkRegion.span.latitudeDelta,
+                                      deltaLon: mkRegion.span.longitudeDelta)
+        return terraRegion
+    }
+    
+    func updateViewMarkers(add viewMarkersToAdd: [TerraViewMarker], remove viewMarkersToRemove: [TerraViewMarker]) {
+        fatalError(debugMessage_notImplemented)
+    }
+}
