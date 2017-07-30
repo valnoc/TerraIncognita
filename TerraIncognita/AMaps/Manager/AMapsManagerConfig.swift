@@ -8,5 +8,5 @@
 
 import Foundation
 
-protocol AMapsManagerConfig:TerraManagerConfig {
+protocol AMapsManagerConfig: TerraManagerConfig {
 }

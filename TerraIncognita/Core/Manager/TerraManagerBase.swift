@@ -16,12 +16,9 @@ class TerraManagerBase: TerraManager {
     var viewObjectsPool: TerraViewObjectsPool
     var updateViewQueue:DispatchQueue
     
-    var currentViewMarkers:[TerraMarker]
-    
-    required init(config:TerraManagerConfig) {
+    init(config:TerraManagerConfig) {
         storage = TerraStorage()
         updateViewQueue = DispatchQueue(label: "TerraManagerBase_updateViewQueue")
-        currentViewMarkers = []
         viewObjectsPool = TerraViewObjectsPool()
     }
     
