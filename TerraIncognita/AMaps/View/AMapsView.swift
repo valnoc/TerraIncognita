@@ -11,8 +11,8 @@ import MapKit
 
 class AMapsView: MKMapView {
 
-//    init() {
-//        delegate = self
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
 //    }
 }
 
@@ -30,10 +30,12 @@ extension AMapsView: TerraView {
     }
     
     func updateViewMarkers(add viewMarkersToAdd: [TerraViewMarker], remove viewMarkersToRemove: [TerraViewMarker]) {
-        fatalError(debugMessage_notImplemented)
+        delegate = self
+        removeAnnotations(viewMarkersToRemove as! [AMapsViewMarker])
+        addAnnotations(viewMarkersToAdd as! [AMapsViewMarker])
     }
 }
 
 extension AMapsView: MKMapViewDelegate {
-    
+
 }
