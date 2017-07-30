@@ -10,6 +10,10 @@ import Foundation
 import MapKit
 
 class AMapsView: MKMapView, TerraView {
+    func view() -> UIView {
+        return self
+    }
+    
     func currentRegion() -> TerraRegion {
         let mkRegion = region
         let terraRegion = TerraRegion(center: mkRegion.center,
