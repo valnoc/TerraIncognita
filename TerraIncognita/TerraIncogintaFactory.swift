@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum TerraIncogintaSource {
     case AMaps
@@ -19,6 +20,10 @@ class TerraIncognitaFactory {
         case .AMaps:
             return AMapsManagerObj(config: config as! AMapsManagerConfig)
         }
+    }
+    
+    func makeTerraMarker(_id: String, coordinate: CLLocationCoordinate2D) -> TerraMarker {
+        return TerraMarker(_id: _id, coordinate: coordinate)
     }
     
 }

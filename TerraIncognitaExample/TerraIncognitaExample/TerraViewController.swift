@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TerraViewController: UIViewController, TerraManagerConfig {
     
@@ -14,6 +15,10 @@ class TerraViewController: UIViewController, TerraManagerConfig {
     
     func configureWithTerraSource(_ source:TerraIncogintaSource) {
         terraManager = TerraIncognitaFactory().makeTerraManager(source: source, config: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         let terraView = terraManager.makeTerraView()
         let mapView = terraView.view()
@@ -22,8 +27,29 @@ class TerraViewController: UIViewController, TerraManagerConfig {
         self.view.addSubview(mapView)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        startUpdatingMarkers()
     }
 
+    func startUpdatingMarkers() {
+        terraManager.reloadMarkers(makeMarkersSet1())
+    }
+    
+    func makeMarkersSet1() -> [TerraMarker] {
+        let factory = TerraIncognitaFactory()
+        var markers:[TerraMarker] = []
+        
+        do{
+            let marker = factory.makeTerraMarker(_id: "belgorod", coordinate: CLLocationCoordinate2D(latitude: 50.610, longitude: 36.590))
+            markers.append(marker)
+        }
+        do{
+            let marker = factory.makeTerraMarker(_id: "moscow", coordinate: CLLocationCoordinate2D(latitude: 55.750, longitude: 37.620))
+            markers.append(marker)
+        }
+        
+        return markers
+    }
 }
