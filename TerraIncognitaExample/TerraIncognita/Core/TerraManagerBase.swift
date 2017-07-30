@@ -19,7 +19,7 @@ class TerraManagerBase: TerraManager {
     
     required init(config:TerraManagerConfig) {
         storage = TerraStorage()
-        updateViewQueue = DispatchQueue(label: "TerraManagerBase")
+        updateViewQueue = DispatchQueue(label: "TerraManagerBase_updateViewQueue")
         currentViewMarkers = []
     }
     
