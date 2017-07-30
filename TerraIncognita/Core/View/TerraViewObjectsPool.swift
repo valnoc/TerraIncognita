@@ -57,7 +57,7 @@ class TerraViewObjectsPool {
         return otherViewMarkers
     }
     
-    fileprivate func makeViewMarker(_ markerId: String) -> TerraViewMarker {
+    func makeViewMarker(_ markerId: String) -> TerraViewMarker {
         fatalError(debugMessage_notImplemented)
     }
     
