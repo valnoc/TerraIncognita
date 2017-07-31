@@ -10,7 +10,7 @@ import Foundation
 
 class GMapsManagerObj: TerraManagerBase {
 
-    weak var aMapsDelegate: GMapsManagerDelegate? {
+    weak var gMapsDelegate: GMapsManagerDelegate? {
         get{
             return delegate as? GMapsManagerDelegate
         }
