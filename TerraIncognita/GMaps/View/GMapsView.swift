@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import MapKit
+import GoogleMaps
 
-class GMapsView: MKMapView {
+class GMapsView: GMSMapView {
 
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
@@ -39,6 +39,6 @@ extension GMapsView: TerraView {
     }
 }
 
-extension GMapsView: MKMapViewDelegate {
+extension GMapsView: GMSMapViewDelegate {
 
 }
