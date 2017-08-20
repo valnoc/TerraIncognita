@@ -21,13 +21,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n41-2n-hpg">
-                                <rect key="frame" x="163.5" y="318.5" width="48" height="30"/>
+                                <rect key="frame" x="163" y="303.5" width="49" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="061-Lc-Lbh">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                         <state key="normal" title="AMaps"/>
                                         <connections>
                                             <segue destination="ByU-Pn-Sec" kind="show" identifier="AMapsSegue" id="mfs-Zv-Gqk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnX-K4-vIW">
+                                        <rect key="frame" x="0.0" y="30" width="49" height="30"/>
+                                        <state key="normal" title="GMaps"/>
+                                        <connections>
+                                            <segue destination="zc3-jq-5wd" kind="show" identifier="GMapsSegue" id="X9K-Rd-1wI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -63,12 +70,30 @@
             </objects>
             <point key="canvasLocation" x="1961" y="-149"/>
         </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="Ib6-yn-XWd">
+            <objects>
+                <viewController id="zc3-jq-5wd" customClass="GMapsViewController" customModule="TerraIncognitaExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h3D-Va-DWr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Nz-m6-47l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="knJ-ML-2JZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kc-e7-KpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="505"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="A55-cj-p3q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mT7-BA-pD9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JxV-SM-t2r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JxV-SM-t2r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -21,10 +21,8 @@ class MenuViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AMapsSegue" {
-            let vc = segue.destination as! AMapsViewController
-            vc.configureWithTerraSource(.AMaps)
-        }
+        let vc = segue.destination as! TerraViewController
+        vc.configure()
     }
 }
 

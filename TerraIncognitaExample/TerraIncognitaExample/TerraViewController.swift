@@ -13,8 +13,12 @@ class TerraViewController: UIViewController, TerraManagerConfig {
     
     var terraManager: TerraManager!
     
-    func configureWithTerraSource(_ source:TerraIncogintaSource) {
-        terraManager = TerraIncognitaFactory().makeTerraManager(source: source, config: self)
+    func terraSource() -> TerraIncogintaSource {
+        return .AMaps
+    }
+    
+    func configure() {
+        terraManager = TerraIncognitaFactory().makeTerraManager(source: terraSource(), config: self)
     }
     
     override func viewDidLoad() {
