@@ -28,7 +28,7 @@ class TerraViewObjectsPool {
             if let usedMarker = usedViewMarkers.filter({ $0.terra_markerId == markerId && $0.terra_reuseIdentifier == reuseIdentifier}).first {
                 marker = usedMarker
             }
-            else if var freeMarker = freeViewMarkers.first {
+            else if let freeMarker = freeViewMarkers.first {
                 freeMarker.terra_markerId = markerId
                 freeMarker.terra_reuseIdentifier = reuseIdentifier
                 marker = freeMarker
