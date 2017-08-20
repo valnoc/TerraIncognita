@@ -14,6 +14,18 @@ class GMapsView: GMSMapView {
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
+    
+    func removeOverlays(_ overlays:[GMSOverlay]) {
+        for item in overlays {
+            item.map = nil
+        }
+    }
+    
+    func addOverlays(_ overlays:[GMSOverlay]) {
+        for item in overlays {
+            item.map = self
+        }
+    }
 }
 
 extension GMapsView: TerraView {
@@ -31,8 +43,8 @@ extension GMapsView: TerraView {
         DispatchQueue.main.async { [weak self] in
             guard let __self = self else { return }
             __self.delegate = __self
-            __self.removeAnnotations(viewMarkersToRemove as! [GMapsViewMarker])
-            __self.addAnnotations(viewMarkersToAdd as! [GMapsViewMarker])
+            __self.removeOverlays(viewMarkersToRemove as! [GMapsViewMarker])
+            __self.addOverlays(viewMarkersToAdd as! [GMapsViewMarker])
         }
     }
 }

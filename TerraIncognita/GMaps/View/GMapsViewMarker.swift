@@ -7,18 +7,14 @@
 //
 
 import Foundation
-import MapKit
+import GoogleMaps
 
-class GMapsViewMarker: NSObject, TerraViewMarker {
+class GMapsViewMarker: GMSMarker, TerraViewMarker {
     var terra_markerId: String!
     var terra_reuseIdentifier: String?
-    var terra_coordinate: CLLocationCoordinate2D!
-}
-
-extension GMapsViewMarker: MKAnnotation {
-    public var coordinate: CLLocationCoordinate2D {
-        get{
-            return terra_coordinate
+    var terra_coordinate: CLLocationCoordinate2D! {
+        didSet{
+            position = terra_coordinate
         }
     }
 }
