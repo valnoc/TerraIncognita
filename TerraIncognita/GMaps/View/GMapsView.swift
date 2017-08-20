@@ -22,10 +22,8 @@ extension GMapsView: TerraView {
     }
     
     func currentRegion() -> TerraRegion {
-        let mkRegion = region
-        let terraRegion = TerraRegion(center: mkRegion.center,
-                                      deltaLat: mkRegion.span.latitudeDelta,
-                                      deltaLon: mkRegion.span.longitudeDelta)
+        let gmsRegion = projection.visibleRegion()
+        let terraRegion = TerraRegion(gmsVisibleRegion: gmsRegion)
         return terraRegion
     }
     
