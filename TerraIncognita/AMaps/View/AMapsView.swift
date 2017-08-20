@@ -23,9 +23,7 @@ extension AMapsView: TerraView {
     
     func currentRegion() -> TerraRegion {
         let mkRegion = region
-        let terraRegion = TerraRegion(center: mkRegion.center,
-                                      deltaLat: mkRegion.span.latitudeDelta,
-                                      deltaLon: mkRegion.span.longitudeDelta)
+        let terraRegion = TerraRegion(mkCoordinateRegion: mkRegion)
         return terraRegion
     }
     

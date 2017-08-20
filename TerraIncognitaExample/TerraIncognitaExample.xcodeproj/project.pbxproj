@@ -33,6 +33,7 @@
 		5B69B0861F2E043900CFE1F4 /* AMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0811F2E043900CFE1F4 /* AMapsView.swift */; };
 		5B69B0871F2E043900CFE1F4 /* AMapsViewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0821F2E043900CFE1F4 /* AMapsViewMarker.swift */; };
 		5B69B0881F2E043900CFE1F4 /* AMapsViewObjectsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B0831F2E043900CFE1F4 /* AMapsViewObjectsPool.swift */; };
+		5B6B37511F4A0675002D337A /* TerraRegion+AMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B37501F4A0675002D337A /* TerraRegion+AMaps.swift */; };
 		5BB56EF61F2CF03200918069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56EF51F2CF03200918069 /* AppDelegate.swift */; };
 		5BB56EF81F2CF03200918069 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56EF71F2CF03200918069 /* MenuViewController.swift */; };
 		5BB56EFB1F2CF03200918069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EF91F2CF03200918069 /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		5B69B0811F2E043900CFE1F4 /* AMapsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMapsView.swift; sourceTree = "<group>"; };
 		5B69B0821F2E043900CFE1F4 /* AMapsViewMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMapsViewMarker.swift; sourceTree = "<group>"; };
 		5B69B0831F2E043900CFE1F4 /* AMapsViewObjectsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMapsViewObjectsPool.swift; sourceTree = "<group>"; };
+		5B6B37501F4A0675002D337A /* TerraRegion+AMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TerraRegion+AMaps.swift"; sourceTree = "<group>"; };
 		5BB56EF21F2CF03200918069 /* TerraIncognitaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraIncognitaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB56EF51F2CF03200918069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB56EF71F2CF03200918069 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		5B69B0751F2E01E300CFE1F4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B6B37501F4A0675002D337A /* TerraRegion+AMaps.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				5B69B0571F2E007700CFE1F4 /* TerraConstants.swift in Sources */,
 				5B69B05A1F2E007700CFE1F4 /* TerraViewMarker.swift in Sources */,
 				5B69B0521F2E007700CFE1F4 /* TerraManager.swift in Sources */,
+				5B6B37511F4A0675002D337A /* TerraRegion+AMaps.swift in Sources */,
 				5B3221B41F2E0C3B008FCB24 /* TerraIncogintaFactory.swift in Sources */,
 				5B3221B21F2E0BD3008FCB24 /* TerraViewController.swift in Sources */,
 				5B69B0881F2E043900CFE1F4 /* AMapsViewObjectsPool.swift in Sources */,

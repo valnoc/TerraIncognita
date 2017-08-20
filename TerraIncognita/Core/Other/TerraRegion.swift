@@ -9,45 +9,42 @@
 import Foundation
 import CoreLocation
 
+// lat - vertical
+// lon - horizontal
 class TerraRegion {
-    var center: CLLocationCoordinate2D
+    var topLeft: CLLocationCoordinate2D
+    var topRight: CLLocationCoordinate2D
+    var bottomLeft: CLLocationCoordinate2D
+    var bottomRight: CLLocationCoordinate2D
     
-    var deltaLat: CLLocationDegrees
-    var deltaLon: CLLocationDegrees
-    
-    var northWest: CLLocationCoordinate2D
-    var southEast: CLLocationCoordinate2D
-    
-    init(center: CLLocationCoordinate2D,
-         deltaLat: CLLocationDegrees,
-         deltaLon: CLLocationDegrees) {
-        self.center = center
-        self.deltaLat = deltaLat
-        self.deltaLon = deltaLon
-        
-        self.northWest = CLLocationCoordinate2D(latitude: center.latitude - deltaLat,
-                                                longitude: center.longitude + deltaLon)
-        self.southEast = CLLocationCoordinate2D(latitude: center.latitude + deltaLat,
-                                                longitude: center.longitude - deltaLon)
+    init(topLeft: CLLocationCoordinate2D,
+         topRight: CLLocationCoordinate2D,
+         bottomLeft: CLLocationCoordinate2D,
+         bottomRight: CLLocationCoordinate2D) {
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
     }
     
     func containsCoordinate(_ coordinate:CLLocationCoordinate2D) -> Bool {
-        return coordinate.latitude >= northWest.latitude && coordinate.latitude <= southEast.latitude &&
-            coordinate.longitude >= southEast.longitude && coordinate.longitude <= northWest.longitude
-    }
-    
-    //MARK: northWest & southEast
-    fileprivate func makeNorthWestSouthEast() -> (CLLocationCoordinate2D, CLLocationCoordinate2D) {
-        return (makeNorthWest(), makeSouthEast())
-    }
-    
-    fileprivate func makeNorthWest() -> CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: center.latitude - deltaLat,
-                                      longitude: center.longitude + deltaLon)
-    }
-    
-    fileprivate func makeSouthEast() -> CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: center.latitude + deltaLat,
-                                      longitude: center.longitude - deltaLon)
+        //TODO: search in trapezoid
+        var latInside = false
+        if topLeft.latitude < bottomLeft.latitude {
+            latInside = coordinate.latitude >= topLeft.latitude && coordinate.latitude <= bottomLeft.latitude
+        }
+        else {
+            latInside = coordinate.latitude >= bottomLeft.latitude && coordinate.latitude <= topLeft.latitude
+        }
+        
+        var lonInside = false
+        if topLeft.longitude < topRight.longitude {
+            lonInside = coordinate.longitude >= topLeft.longitude && coordinate.longitude <= topRight.longitude
+        }
+        else {
+            lonInside = coordinate.longitude >= topRight.longitude && coordinate.longitude <= topLeft.longitude
+        }
+        
+        return latInside && lonInside
     }
 }
