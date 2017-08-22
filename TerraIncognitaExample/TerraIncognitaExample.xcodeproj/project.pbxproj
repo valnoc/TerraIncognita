@@ -42,6 +42,7 @@
 		5BB56EFD1F2CF03200918069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EFC1F2CF03200918069 /* Assets.xcassets */; };
 		5BB56F001F2CF03200918069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EFE1F2CF03200918069 /* LaunchScreen.storyboard */; };
 		5BB56F0B1F2CF03300918069 /* TerraIncognitaExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */; };
+		5BFD0BC11F4CA75000440D6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD0BC01F4CA75000440D6A /* Constants.swift */; };
 		C4054A239A4BBF99F33CF5DB /* Pods_TerraIncognitaExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1961F0C41C3969124CCC6CE /* Pods_TerraIncognitaExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		5BB56F061F2CF03300918069 /* TerraIncognitaExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerraIncognitaExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerraIncognitaExampleTests.swift; sourceTree = "<group>"; };
 		5BB56F0C1F2CF03300918069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFD0BC01F4CA75000440D6A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D9C663256BEAF87DC329475 /* Pods-TerraIncognitaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerraIncognitaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TerraIncognitaExample/Pods-TerraIncognitaExample.release.xcconfig"; sourceTree = "<group>"; };
 		B1961F0C41C3969124CCC6CE /* Pods_TerraIncognitaExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerraIncognitaExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D104899D92D8E1ADFD340D5F /* Pods_TerraIncognitaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerraIncognitaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +314,7 @@
 			children = (
 				5BB56EF51F2CF03200918069 /* AppDelegate.swift */,
 				5BB56EF71F2CF03200918069 /* MenuViewController.swift */,
+				5BFD0BC01F4CA75000440D6A /* Constants.swift */,
 				5B3221B11F2E0BD3008FCB24 /* TerraViewController.swift */,
 				5B3221AF1F2E0AC5008FCB24 /* AMapsViewController.swift */,
 				5B6B37541F4A1156002D337A /* GMapsViewController.swift */,
@@ -552,6 +555,7 @@
 				5B0FA8241F2FAE7E00EFA833 /* GMapsView.swift in Sources */,
 				5B69B05B1F2E007700CFE1F4 /* TerraViewObjectsPool.swift in Sources */,
 				5BB56EF81F2CF03200918069 /* MenuViewController.swift in Sources */,
+				5BFD0BC11F4CA75000440D6A /* Constants.swift in Sources */,
 				5B0FA8221F2FAE7E00EFA833 /* GMapsManagerConfig.swift in Sources */,
 				5B69B0531F2E007700CFE1F4 /* TerraManagerBase.swift in Sources */,
 				5B69B0571F2E007700CFE1F4 /* TerraConstants.swift in Sources */,

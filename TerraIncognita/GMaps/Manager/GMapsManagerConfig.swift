@@ -9,4 +9,5 @@
 import Foundation
 
 protocol GMapsManagerConfig: TerraManagerConfig {
+    var apiKey: String {get}
 }

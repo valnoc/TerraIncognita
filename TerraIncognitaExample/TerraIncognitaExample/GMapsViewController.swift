@@ -9,6 +9,11 @@
 import UIKit
 
 class GMapsViewController: TerraViewController, GMapsManagerConfig {
+    
+    var apiKey: String {
+        return Constants.googleApiKey
+    }
+    
     override func terraSource() -> TerraIncogintaSource {
         return .GMaps
     }
