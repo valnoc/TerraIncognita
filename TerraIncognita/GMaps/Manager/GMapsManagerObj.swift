@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleMaps
 
 class GMapsManagerObj: TerraManagerBase {
 
@@ -21,6 +22,8 @@ class GMapsManagerObj: TerraManagerBase {
 
     init(config: GMapsManagerConfig) {
         super.init(config: config)
+        
+        GMSServices.provideAPIKey(config.apiKey)
         viewObjectsPool = GMapsViewObjectsPool()
     }
 
