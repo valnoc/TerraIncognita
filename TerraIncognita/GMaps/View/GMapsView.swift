@@ -7,23 +7,35 @@
 //
 
 import Foundation
-import MapKit
+import GoogleMaps
 
-class AMapsView: MKMapView {
+class GMapsView: GMSMapView {
 
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
+    
+    func removeOverlays(_ overlays:[GMSOverlay]) {
+        for item in overlays {
+            item.map = nil
+        }
+    }
+    
+    func addOverlays(_ overlays:[GMSOverlay]) {
+        for item in overlays {
+            item.map = self
+        }
+    }
 }
 
-extension AMapsView: TerraView {
+extension GMapsView: TerraView {
     func view() -> UIView {
         return self
     }
     
     func currentRegion() -> TerraRegion {
-        let mkRegion = region
-        let terraRegion = TerraRegion(mkCoordinateRegion: mkRegion)
+        let gmsRegion = projection.visibleRegion()
+        let terraRegion = TerraRegion(gmsVisibleRegion: gmsRegion)
         return terraRegion
     }
     
@@ -31,12 +43,12 @@ extension AMapsView: TerraView {
         DispatchQueue.main.async { [weak self] in
             guard let __self = self else { return }
             __self.delegate = __self
-            __self.removeAnnotations(viewMarkersToRemove as! [AMapsViewMarker])
-            __self.addAnnotations(viewMarkersToAdd as! [AMapsViewMarker])
+            __self.removeOverlays(viewMarkersToRemove as! [GMapsViewMarker])
+            __self.addOverlays(viewMarkersToAdd as! [GMapsViewMarker])
         }
     }
 }
 
-extension AMapsView: MKMapViewDelegate {
+extension GMapsView: GMSMapViewDelegate {
 
 }

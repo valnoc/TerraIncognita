@@ -9,5 +9,7 @@
 import UIKit
 
 class AMapsViewController: TerraViewController, AMapsManagerConfig {
-    
+    override func terraSource() -> TerraIncogintaSource {
+        return .AMaps
+    }
 }

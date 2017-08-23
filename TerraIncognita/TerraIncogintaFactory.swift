@@ -11,6 +11,7 @@ import CoreLocation
 
 enum TerraIncogintaSource {
     case AMaps
+    case GMaps
 }
 
 class TerraIncognitaFactory {
@@ -19,6 +20,8 @@ class TerraIncognitaFactory {
         switch source {
         case .AMaps:
             return AMapsManagerObj(config: config as! AMapsManagerConfig)
+        case .GMaps:
+            return GMapsManagerObj(config: config as! GMapsManagerConfig)
         }
     }
     
