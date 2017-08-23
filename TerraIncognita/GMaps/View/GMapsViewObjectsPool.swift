@@ -13,9 +13,20 @@ class GMapsViewObjectsPool: TerraViewObjectsPool {
     
     //MARK: viewMarkers
     override func makeViewMarker(_ markerId: String, reuseIdentifier: String?) -> TerraViewMarker {
-        let viewMarker = GMapsViewMarker()
-        viewMarker.terra_markerId = markerId
-        viewMarker.terra_reuseIdentifier = reuseIdentifier
-        return viewMarker
+        if Platform.isSimulator {
+            var viewMarker: GMapsViewMarker!
+            DispatchQueue.main.sync {
+                viewMarker = GMapsViewMarker()
+                viewMarker.terra_markerId = markerId
+                viewMarker.terra_reuseIdentifier = reuseIdentifier
+            }
+            return viewMarker
+        }
+        else {
+            let viewMarker = GMapsViewMarker()
+            viewMarker.terra_markerId = markerId
+            viewMarker.terra_reuseIdentifier = reuseIdentifier
+            return viewMarker
+        }
     }
 }

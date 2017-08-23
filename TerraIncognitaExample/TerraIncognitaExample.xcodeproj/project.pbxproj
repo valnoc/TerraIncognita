@@ -43,6 +43,7 @@
 		5BB56F001F2CF03200918069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB56EFE1F2CF03200918069 /* LaunchScreen.storyboard */; };
 		5BB56F0B1F2CF03300918069 /* TerraIncognitaExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */; };
 		5BFD0BC11F4CA75000440D6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD0BC01F4CA75000440D6A /* Constants.swift */; };
+		5BFD0BC31F4CAE7C00440D6A /* PlatformExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD0BC21F4CAE7C00440D6A /* PlatformExt.swift */; };
 		C4054A239A4BBF99F33CF5DB /* Pods_TerraIncognitaExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1961F0C41C3969124CCC6CE /* Pods_TerraIncognitaExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		5BB56F0A1F2CF03300918069 /* TerraIncognitaExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerraIncognitaExampleTests.swift; sourceTree = "<group>"; };
 		5BB56F0C1F2CF03300918069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BFD0BC01F4CA75000440D6A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BFD0BC21F4CAE7C00440D6A /* PlatformExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformExt.swift; sourceTree = "<group>"; };
 		8D9C663256BEAF87DC329475 /* Pods-TerraIncognitaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerraIncognitaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TerraIncognitaExample/Pods-TerraIncognitaExample.release.xcconfig"; sourceTree = "<group>"; };
 		B1961F0C41C3969124CCC6CE /* Pods_TerraIncognitaExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerraIncognitaExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D104899D92D8E1ADFD340D5F /* Pods_TerraIncognitaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerraIncognitaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,7 @@
 			children = (
 				5B69B04C1F2E007700CFE1F4 /* TerraConstants.swift */,
 				5B69B04D1F2E007700CFE1F4 /* TerraRegion.swift */,
+				5BFD0BC21F4CAE7C00440D6A /* PlatformExt.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 			files = (
 				5B6B37531F4A0C4D002D337A /* TerraRegion+GMaps.swift in Sources */,
 				5B0FA8231F2FAE7E00EFA833 /* GMapsManagerObj.swift in Sources */,
+				5BFD0BC31F4CAE7C00440D6A /* PlatformExt.swift in Sources */,
 				5B69B0581F2E007700CFE1F4 /* TerraRegion.swift in Sources */,
 				5B69B0591F2E007700CFE1F4 /* TerraView.swift in Sources */,
 				5B0FA8261F2FAE7E00EFA833 /* GMapsViewObjectsPool.swift in Sources */,

@@ -9,5 +9,5 @@
 import Foundation
 
 class Constants {
-    static let googleApiKey = "YOUR_API_KEY_HERE"
+    static let googleApiKey = "AIzaSyAX_z3yQ2cVYdMCIwQYRqDp8PwZYoSb-E0"
 }
